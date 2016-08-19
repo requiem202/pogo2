@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  form(method='POST', action='')
+    p
+      label Account type
+      select(name='account')
+        option(value='google') Google
+        option(value='ptc') Pokemon trainer club
+    p
+      label Username 
+      input(type='text', name='username')
+    p
+      lable Password 
+      input(type='password', name='password')
+    p
+      input(type='submit' value='Go')
