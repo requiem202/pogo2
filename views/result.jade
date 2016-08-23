@@ -1,28 +1,38 @@
 extends layout
 block js
     script(src='/js/list.js')
+    script(src='/js/site.js')
 
 block content
   h1= username
   div#result
     button.sort(data-sort='name') Sort by name
+    button(onclick='sortNameThenCp(userList)') Sort by name then CP
+    button(onclick='sortNameThenIv(userList)') Sort by name then IV
     button.sort(data-sort='cp') Sort by CP
     button.sort(data-sort='iv') Sort by IV
-    table
+    table.table.table-bordered.table-hover
         thead
             tr
                 th Name
                 th CP
                 th IV
+                th IV Stamina
+                th IV Attack
+                th IV Defence
         tbody.list 
             each pokemon in data
                 tr
                     td.name(style='width:300px')= pokemon.name
                     td.cp(style='width:150px')= pokemon.cp
                     td.iv(style='width:150px')= pokemon.iv
+                    td.iv_sta(style='width:150px')= pokemon.iv_sta
+                    td.iv_atk(style='width:150px')= pokemon.iv_atk
+                    td.iv_def(style='width:150px')= pokemon.iv_def
 
     script.
         var options = {
-            valueNames: [ 'name', 'cp', 'iv' ]
+            valueNames: [ 'name', 'cp', 'iv', 'iv_sta', 'iv_atk', 'iv_def' ]
         };
         var userList = new List('result', options);
+        

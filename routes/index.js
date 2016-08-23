@@ -39,7 +39,8 @@ router.post('/', function(req, res) {
     //console.log(inventory);
     for(var i = 0; i<inventory.inventory_delta.inventory_items.length; i++)
     {
-        if (inventory.inventory_delta.inventory_items[i].inventory_item_data.pokemon_data != null) {
+        if (inventory.inventory_delta.inventory_items[i].inventory_item_data.pokemon_data != null
+        && inventory.inventory_delta.inventory_items[i].inventory_item_data.pokemon_data.cp > 0) {
             // console.log(inventory.inventory_delta.inventory_items[i].inventory_item_data.pokemon_data);
             // count++;
             //if (inventory.inventory_delta.inventory_items[i].inventory_item_data.pokemon_data.pokemon_id == 69){
@@ -61,6 +62,10 @@ router.post('/', function(req, res) {
                 name: name,
                 cp: pokemon.cp,
                 iv: iv,
+                iv_atk: pokemon.individual_attack,
+                iv_def: pokemon.individual_defense,
+                iv_sta: pokemon.individual_stamina,
+
             };
             list.push(result);
         }
