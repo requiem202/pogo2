@@ -4,10 +4,15 @@ This small app will list your Pokemon GO's pokemons, sorted by IV.
 
 This is an improved version of previous pogo app. With web interface, sortable web output, adn PTC support.
 
+## Installation
+
+1. Install latest [Node.js](https://nodejs.org/en/)
+2. Clone this repository and cd in.
+3. Restore Node dependnecies using `npm install`
 
 ## Usage
 
-Clone this repository and use "gulp" then open browser to http://localhost:3000/
+Type "gulp" then open browser to http://localhost:3000/
 
 ## Thank you
 [Pogobuf](https://github.com/cyraxx/pogobuf) for their amazing API!
