@@ -1,6 +1,11 @@
 # POGO2 - A quick proof of concept
 
-This small app will list your Pokemon GO's pokemons, sorted by IV.
+This small app will list your Pokemon GO's pokemons in a table with different sort available.
+- Sort by name
+- Sort by name then by CP
+- Sort by name then by IV
+- Sort by VP
+- Sort by IV
 
 This is an improved version of previous pogo app. With web interface, sortable web output, adn PTC support.
 
