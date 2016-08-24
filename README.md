@@ -8,7 +8,7 @@ This is an improved version of previous pogo app. With web interface, sortable w
 
 1. Install latest [Node.js](https://nodejs.org/en/)
 2. Clone this repository and cd in.
-3. Restore Node dependnecies using `npm install`
+3. Restore Node dependencies using `npm install`
 
 ## Usage
 
